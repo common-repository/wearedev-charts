@@ -1,0 +1,473 @@
+#wearedev-charts {
+    background: #fff;
+}
+
+#media-upload form {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+form.chart-modal {
+    height: 100vh;
+}
+
+form.chart-modal .media-frame-toolbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#wearedev-charts .inside {
+    padding: 0;
+    margin-top: 0;
+}
+
+#wearedev-charts #app,
+#app {
+    display: block;
+    overflow: hidden;
+}
+
+#media-upload .chart,
+#media-upload form.chart-modal .chart{
+    height: calc(100vh - 60px);
+}
+
+#wearedev-charts div > .chart {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    display: flex;
+}
+
+#media-upload #wearedev-charts .chart {
+    max-height: calc(100vh - 60px);
+}
+
+#media-upload #wearedev-charts .chart .left{
+    overflow-y: scroll;
+}
+
+#wearedev-charts .chart .left {
+    width: 40%;
+    padding: 0px;
+    display: inline-block;
+    float: left;
+    background: #f3f3f3;
+    border-right: 1px solid #e3e3e3;
+}
+
+#wearedev-charts .chart .right {
+    width: 60%;
+    padding: 50px 75px;
+    display: inline-block;
+    float: left;
+}
+
+#media-upload #wearedev-charts .chart .left {}
+#media-upload #wearedev-charts .chart .right {
+    padding: 25px 125px;
+}
+
+#wearedev-charts .chart .left .title {
+    padding: 15px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#wearedev-charts .chart .left .title input {
+    width: 100%;
+}
+
+#wearedev-charts .chart .left .data {}
+
+#wearedev-charts .chart .left .data ul > li .datafield {
+}
+
+#wearedev-charts .chart .left .data ul > li .datafield .datafield-header {
+    overflow: hidden;
+}
+
+#wearedev-charts .chart .left .data ul > li > .datafield .datafield-header strong,
+#wearedev-charts .chart .left .data > ul > li > .dataset .dataset-header strong {
+    padding: 0 15px;
+    line-height: 48px;
+    cursor: pointer;
+}
+
+#wearedev-charts .chart .left .data ul > li > .datafield .datafield-header .trigger,
+#wearedev-charts .chart .left .data > ul > li > .dataset .dataset-header .trigger {
+    position: relative;
+    float: right;
+    display: block;
+    width: 30px;
+    height: 48px;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+#wearedev-charts .chart .left .data ul li .datafield .datafield-header .trigger:before,
+#wearedev-charts .chart .left .data ul li .datafield .datafield-header .trigger:after,
+#wearedev-charts .chart .left .data > ul > li > .dataset .dataset-header .trigger:before,
+#wearedev-charts .chart .left .data > ul > li > .dataset .dataset-header .trigger:after {
+   content: "";
+   width: 12px;
+   height: 0.1875rem;
+   display: block;
+   position: absolute;
+   left: 9px;
+   background: black;
+   top: 24px;
+   transition: 0.3s cubic-bezier(0.75, 0.75, 0.25, 0.5);
+}
+
+#wearedev-charts .chart .left .data ul li .datafield .vc-chrome {
+    position: absolute;
+    left: 180px;
+    top: 25px;
+    z-index: 1;
+    max-width: 320px;
+}
+
+#wearedev-charts .chart .left .data ul li .datafield .datafield-header .trigger:before,
+#wearedev-charts .chart .left .data > ul > li > .dataset .dataset-header .trigger:before {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#wearedev-charts .chart .left .data ul li .datafield .datafield-header .trigger:after,
+#wearedev-charts .chart .left .data > ul > li > .dataset .dataset-header .trigger:after {
+    -webkit-transform: translate(-50%,-50%) rotate(90deg);
+    -moz-transform: translate(-50%,-50%) rotate(90deg);
+    -ms-transform: translate(-50%,-50%) rotate(90deg);
+    -o-transform: translate(-50%,-50%) rotate(90deg);
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+
+#wearedev-charts .chart .left .data ul li > .datafield.active .datafield-header .trigger:after,
+#wearedev-charts .chart .left .data > ul > li > .dataset.active .dataset-header .trigger:after {
+     -webkit-transform: translate(-50%, -50%) rotate(180deg);
+     -moz-transform: translate(-50%, -50%) rotate(180deg);
+     -ms-transform: translate(-50%, -50%) rotate(180deg);
+     -o-transform: translate(-50%, -50%) rotate(180deg);
+     transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#wearedev-charts .chart .left .data ul li .datafield .remove-dataset {
+    display: none;
+    color: red;
+    text-decoration: underline;
+    font-weight: normal;
+    margin-left: 25px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#wearedev-charts .chart .left .data ul > li > .datafield.active .remove-dataset {
+    display: inherit;
+}
+
+#wearedev-charts .chart .left .data > ul,
+#wearedev-charts .chart .left .data > ul li .dataset > ul {
+    border-bottom: 1px solid #e3e3e3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#wearedev-charts .chart .left .data > ul > li,
+#wearedev-charts .chart .left .data > ul > li .dataset > ul > li {
+    border-top: 1px solid #e3e3e3;
+    padding: 0;
+    margin: 0;
+}
+#wearedev-charts .chart .left .data > ul > li:first-child {
+    border-top-color: transparent;
+}
+
+#wearedev-charts .chart .left .data > ul > li .datafield > ul{
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: 0;
+    padding: 0 15px;
+    transition: 0.3s linear;
+}
+
+#wearedev-charts .chart .left .data > ul > li .datafield > ul > li,
+#wearedev-charts .chart .left .data > ul > li .dataset > ul > li {
+    overflow: hidden;
+}
+
+#wearedev-charts .chart .left .data > ul > li .datafield > ul > li > label {
+    width: 65px;
+    display: inline-block;
+    float: left;
+    line-height: 24px;
+}
+
+#wearedev-charts .chart .left .data > ul > li .datafield > ul > li > input {
+    width: calc(100% - 65px);
+    margin: 0;
+}
+
+#wearedev-charts .chart .left .data > ul > li .datafield > ul > li > .color-picker {
+    width: calc(100% - 93px);
+    display: inline-block;
+    float: left;
+}
+
+#wearedev-charts .chart .left .data > ul > li > .datafield > ul > li > .current-color {
+    display: inline-block;
+    float: left;
+    width: 28px;
+    height: 25px;
+    background-color: #000;
+    cursor: pointer;
+}
+
+#wearedev-charts .chart .left .data > ul > li .dataset {
+    background: #fff;
+}
+
+#wearedev-charts .chart .left .data > ul > li .dataset > ul {
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: 0;
+    padding: 0;
+    transition: 0.3s linear;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+#wearedev-charts .chart .left .data > ul > li .dataset a.button {
+    display: none;
+}
+
+#wearedev-charts .chart .left .data > ul > li .dataset.active > ul {
+    box-sizing: border-box;
+    max-height: 1000px;
+    transition: 0.3s linear;
+    background: #fff;
+}
+
+#wearedev-charts .chart .left .data > ul > li .dataset .dataset-header {
+    background: #f3f3f3;
+}
+
+#wearedev-charts .chart .left .data > ul > li .dataset.active > ul > li {
+    /*border-top: 0;*/
+}
+
+#wearedev-charts .chart .left .data > ul > li .dataset.active a.button {
+    display: inline-block;
+}
+
+#wearedev-charts .chart .left .data ul > li .datafield.active > ul {
+    box-sizing: border-box;
+    max-height: 1000px;
+    padding: 0 15px 15px 15px;
+    transition: 0.3s linear;
+}
+
+#wearedev-charts .chart .left .data a.button {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.media-frame-toolbar {
+    z-index: 100;
+    bottom: 60px;
+}
+
+.media-frame-toolbar .media-toolbar {
+    top: initial;
+    bottom: -45px;
+    height: auto;
+    overflow: initial;
+    border-top: 1px solid #ddd;
+    background: #f6f6f6;
+    padding: 15px;
+    display: block;
+    overflow: hidden;
+}
+
+.media-toolbar-secondary {
+    float: left;
+    height: 100%;
+}
+
+.media-toolbar-primary {
+    float: right;
+    height: 100%;
+}
+
+.media-toolbar-primary {
+    margin: 0;
+}
+
+.media-modal-content .media-toolbar-primary .media-button {
+    float: right;
+}
+
+.hit-area {
+    position: fixed;
+    width: 100vw;
+    height:  100vh;
+    top: 0;
+    left: 0;
+}
+
+.color-picker {
+    z-index: 10;
+}
+
+
+/* Available charts */
+#wearedev-charts ul.available-charts,
+#wearedev-charts ul.attachments {
+    display: block;
+    overflow: hidden;
+    padding: 6px;
+    margin: 0;
+}
+
+#wearedev-charts ul.available-charts li,
+#wearedev-charts ul.attachments li.attachment {
+    display: inline-block;
+    float: left;
+    width: 16.6667%;
+    height: inherit;
+    padding: 6px;
+    box-sizing: border-box;
+    margin: 0;
+    background: none;
+    opacity: 0.5;
+}
+
+#wearedev-charts ul.available-charts li.active,
+#wearedev-charts ul.attachments li.attachment {
+    opacity: 1;
+}
+
+#wearedev-charts ul.available-charts li a,
+#wearedev-charts ul.attachments li a {
+    width: 100%;
+    height: 120px;
+    display: block;
+    line-height: 200px;
+    background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+    color: #555555;
+    font-size: 13px;
+    box-sizing: border-box;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 0 #ccc;
+    box-shadow: 0 1px 0 #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: url(../images/wearedev-charts_bar.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wearedev-charts .available-charts li.doughnut a,
+#wearedev-charts ul.attachments li.doughnut a {
+    background-image: url(../images/wearedev-charts_doughnut.svg);
+}
+
+#wearedev-charts .available-charts li.pie a,
+#wearedev-charts ul.attachments li.pie a {
+    background-image: url(../images/wearedev-charts_pie.svg);
+}
+
+#wearedev-charts .available-charts li.bar a,
+#wearedev-charts ul.attachments li.bar a {
+    background-image: url(../images/wearedev-charts_bar.svg);
+}
+
+#wearedev-charts .available-charts li.line a,
+#wearedev-charts ul.attachments li.line a {
+    background-image: url(../images/wearedev-charts_line.svg);
+}
+
+#wearedev-charts .available-charts li.radar a,
+#wearedev-charts ul.attachments li.radar a {
+    background-image: url(../images/wearedev-charts_radar.svg);
+}
+
+#wearedev-charts .available-charts li.polar-area a,
+#wearedev-charts ul.attachments li.polar-area a {
+    background-image: url(../images/wearedev-charts_polar-area.svg);
+}
+
+#wearedev-charts .available-charts li.bubble a,
+#wearedev-charts ul.attachments li.bubble a {
+    background-image: url(../images/wearedev-charts_bubble.svg);
+}
+
+#wearedev-charts .available-charts li.scatter a,
+#wearedev-charts ul.attachments li.scatter a {
+    background-image: url(../images/wearedev-charts_scatter.svg);
+}
+
+#wearedev-charts .available-charts li.new-chart a,
+#wearedev-charts ul.attachments li.new-chart a {
+    background-color: #0085ba;
+    background-image: url(../images/wearedev-charts_new-chart.svg);
+    border-color: #0073aa #006799 #006799;
+    -webkit-box-shadow: 0 1px 0 #006799;
+    box-shadow: 0 1px 0 #006799;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+
+#wearedev-charts .available-charts li.new-chart a:hover,
+#wearedev-charts ul.attachments li.new-chart a:hover {
+    background-color: #008ec2;
+    border-color: #006799;
+    color: #fff;
+}
+
+#wearedev-charts .available-charts li.active a:hover,
+#wearedev-charts ul.attachments li a:hover {
+    background-color: #fafafa;
+    border-color: #999999;
+    color: #23282d;
+}
+
+@media screen and (max-width: 900px) {
+    #wearedev-charts ul.available-charts li,
+    #wearedev-charts ul.attachments li.attachment {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    #wearedev-charts ul.available-charts li,
+    #wearedev-charts ul.attachments li.attachment {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #wearedev-charts ul.available-charts li,
+    #wearedev-charts ul.attachments li.attachment {
+        width: 33.33333%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #wearedev-charts ul.available-charts li,
+    #wearedev-charts ul.attachments li.attachment {
+        width: 50%;
+    }
+}

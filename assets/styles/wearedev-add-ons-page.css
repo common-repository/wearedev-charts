@@ -1,0 +1,29 @@
+.wearedev-addons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.wearedev-addons .addon {
+  flex-basis: calc(25% - 20px);
+  padding: 20px;
+  margin: 10px;
+  background: #fff;
+  border:1px solid #e3e3e3;
+  box-sizing: border-box;
+  order: 0;
+}
+
+.wearedev-addons .addon img {
+  display: block;
+  width: 100%;
+  height: inherit;
+}
+
+.wearedev-addons .addon.addon-installed {
+  order: 1;
+}
+
+.wearedev-addons .addon.addon-installed img {
+  filter: grayscale(100%);
+}
